@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Aesthetic Care</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Aesthetic Care</h1>
+    <p>Luxury Skincare & Aesthetic Clinic — Hydrafacials, Serums, Laser Hair Removal & More!</p>
+    <div class="cart-icon" onclick="toggleCart()">
+        🛒 <span id="cartCount">0</span>
+    </div>
+</header>
+
+<!-- Cart Panel -->
+<div id="cartPanel" class="hidden">
+    <h3>Your Cart</h3>
+    <div id="cartItems"></div>
+    <p>Total: $<span id="cartTotal">0</span></p>
+    <button onclick="pay()">Pay Now</button>
+    <button onclick="toggleCart()">Close</button>
+</div>
+
+<div class="container">
+
+    <h2>Products</h2>
+    <div id="products"></div>
+
+    <div class="card">
+        <h3>Discount Code</h3>
+        <input id="discountInput" placeholder="Enter code">
+        <button onclick="applyDiscount()">Apply</button>
+        <p id="discountMessage"></p>
+    </div>
+
+    <div class="card">
+        <h3>Book Appointment</h3>
+        <input id="name" placeholder="Name"><br>
+        <input id="email" placeholder="Email"><br>
+        <input id="date" type="date"><br>
+        <button onclick="book()">Book</button>
+    </div>
+
+    <div class="card">
+        <h2>Admin Login</h2>
+        <input id="adminUser" placeholder="Username">
+        <input id="adminPass" placeholder="Password" type="password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="adminPanel" class="hidden">
+
+        <div class="card">
+            <h3>Add Product</h3>
+            <input id="productName" placeholder="Name">
+            <input id="productPrice" placeholder="Price" type="number">
+            <input id="productStock" placeholder="Stock" type="number">
+            <button onclick="addProduct()">Add Product</button>
+        </div>
+
+        <div class="card">
+            <h3>Add Coupon</h3>
+            <input id="codeName" placeholder="Code">
+            <input id="codeDiscount" placeholder="Discount %" type="number">
+            <input id="codeExpiry" type="date">
+            <input id="codeLimit" placeholder="Limit" type="number">
+            <button onclick="addCode()">Add Coupon</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
